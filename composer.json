@@ -1,0 +1,24 @@
+{
+    "name": "philipowusuasare/bug-report",
+    "description": "Bug report app with unit test",
+    "autoload": {
+        "psr-4": {
+            "Philipowusuasare\\BugReport\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "Tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philip Owusu Asare",
+            "email": "philip.asare@amalitech.org"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    } 
+}
