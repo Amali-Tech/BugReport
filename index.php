@@ -3,7 +3,15 @@ declare(strict_types = 1);
 
 require_once __DIR__ .'/vendor/autoload.php';
 
-// use Philipowusuasare\BugReport\Helpers\Config;
+$application = new Philipowusuasare\BugReport\Helpers\App();
+echo $application->getServerTime()->format('Y-m-d H:i:s') . PHP_EOL;
+echo $application->getLogPath() . PHP_EOL;
+echo $application->getEnvironment() . PHP_EOL;
+echo $application->isDebugMode() . PHP_EOL;
 
-$config = Philipowusuasare\BugReport\Helpers\Config::get('app');
-var_dump($config);
+if ($application->isRunningFromConsole()) {
+    echo 'from console';
+} else {
+    echo 'from browser';
+}
+

@@ -24,7 +24,6 @@ class Config {
                 $fileContent = require $path;
             }
         } catch (\Throwable $exception) {
-            // die($exception->getMessage());
             throw new \RuntimeException(
                 sprintf('The specified file: %s was not found', $filename)
             );
